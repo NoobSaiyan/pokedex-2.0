@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 
-import Card from '../../components/card.component'
+import Card from '../../components/card/card.component'
 
 import './homepage.style.css'
 
