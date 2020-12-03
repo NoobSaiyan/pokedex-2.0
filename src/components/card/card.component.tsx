@@ -15,10 +15,24 @@ const Card: React.FC<Props> = ({ name, id }) => {
     return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
   }
   const num = pad(id.toString(), 3, '')
+
+  const imgStyles: React.CSSProperties = {
+    height: '100px',
+    width: '100px',
+    marginTop: '10px',
+  }
+
   return (
-    <div className='card'>
+    <div className='homeCard'>
       <div className='serial'>{num}</div>
-      <div className='name'>{name}</div>
+      <div className='homeImage'>
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
+          style={{ ...imgStyles }}
+          alt='not found'
+        />
+      </div>
+      <div className='homeName'>{name}</div>
     </div>
   )
 }

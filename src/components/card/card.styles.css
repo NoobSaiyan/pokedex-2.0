@@ -1,4 +1,4 @@
-.card {
+.homeCard {
   color: #4a4a4a;
   font-size: 18px;
   font-weight: 400;
@@ -9,7 +9,7 @@
   width: 200px;
   display: grid;
   grid-template-columns: 15% auto 15%;
-  grid-template-rows: 60% 10% 30%;
+  grid-template-rows: 55% 10% 35%;
   clip-path: polygon(
     0% 15%,
     0 0,
@@ -24,6 +24,17 @@
     14% 40%,
     0 32%
   );
+}
+homeImage {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: #4a4a4a;
+  height: 50px;
+  width: 50px;
+}
+.homeName {
+  grid-row: 2;
+  grid-column: 2;
 }
 .serial {
   font-family: 'Offside', cursive;
