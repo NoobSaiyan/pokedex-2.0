@@ -25,15 +25,18 @@ const HomePage: React.FC = () => {
   )
 
   return (
-    <div className='container'>
-      <div className='cards'>
-        {queryInfo.data?.map(({ name, url }) => {
-          let arr = url.split('/')
-          let id = parseInt(arr[arr.length - 2])
-          return <Card key={id} name={name} id={id} />
-        })}
+    <>
+      <div className='homeTool' />
+      <div className='container'>
+        <div className='cards'>
+          {queryInfo.data?.map(({ name, url }) => {
+            let arr = url.split('/')
+            let id = parseInt(arr[arr.length - 2])
+            return <Card key={id} name={name} id={id} />
+          })}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 export default HomePage
