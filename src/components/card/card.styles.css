@@ -1,11 +1,15 @@
 .card {
-  color: 4a4a4a;
+  color: #4a4a4a;
   font-size: 18px;
+  font-weight: 400;
   text-align: center;
   background-color: #ffeb99;
   margin-top: 40px;
   height: 200px;
   width: 200px;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  grid-template-rows: 60% 10% 30%;
   clip-path: polygon(
     0% 15%,
     0 0,
@@ -20,4 +24,12 @@
     14% 40%,
     0 32%
   );
+}
+.serial {
+  font-family: 'Offside', cursive;
+  margin-right: 20%;
+  height: 60%;
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
 }

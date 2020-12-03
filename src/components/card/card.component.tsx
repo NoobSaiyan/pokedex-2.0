@@ -9,7 +9,18 @@ interface Props {
 
 const Card: React.FC<Props> = ({ name, id }) => {
   name = _.startCase(_.toLower(name))
-  return <div className='card'>{name}</div>
+  function pad(n: string, width: number, z: string) {
+    z = z || '0'
+    n = n + ''
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
+  }
+  const num = pad(id.toString(), 3, '')
+  return (
+    <div className='card'>
+      <div className='serial'>{num}</div>
+      <div className='name'>{name}</div>
+    </div>
+  )
 }
 
 export default Card
