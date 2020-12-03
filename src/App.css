@@ -2,9 +2,14 @@
   margin: 0;
   padding: 0;
 }
+.app {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 100px 100px auto;
+}
 .heading {
+  grid-column: 2 / span 1;
   font-size: 50px;
-  height: 100px;
   line-height: 100px;
   margin-left: 100px;
 }

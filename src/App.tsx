@@ -9,7 +9,7 @@ import './App.css'
 
 const App: React.FC = () => {
   return (
-    <>
+    <div className='app'>
       <Link to='/' className='heading'>
         Dex
       </Link>
@@ -17,7 +17,7 @@ const App: React.FC = () => {
         <Route exact path='/' component={HomePage} />
         <Route path='/1' component={Information} />
       </Switch>
-    </>
+    </div>
   )
 }
 

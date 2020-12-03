@@ -2,6 +2,10 @@ import React from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 
+import Card from '../../components/card.component'
+
+import './homepage.style.css'
+
 interface PokemonResponse {
   count: number
   next: string | null
@@ -21,11 +25,15 @@ const HomePage: React.FC = () => {
   )
 
   return (
-    <>
-      {queryInfo.data?.map((result) => {
-        return <div key={result.name}>{result.name}</div>
-      })}
-    </>
+    <div className='container'>
+      <div className='cards'>
+        {queryInfo.data?.map(({ name, url }) => {
+          let arr = url.split('/')
+          let id = parseInt(arr[arr.length - 2])
+          return <Card key={id} name={name} id={id} />
+        })}
+      </div>
+    </div>
   )
 }
 export default HomePage
