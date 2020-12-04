@@ -4,10 +4,25 @@
   grid-row: 3;
   background-color: #e7e7e7;
   align-items: center;
-  padding-bottom: 100px;
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
+.cards::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.cards::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
 .cards {
+  overflow: hidden;
+  height: 100%;
+  overflow-y: auto;
   padding-left: 2%;
   display: flex;
   flex-wrap: wrap;

@@ -5,15 +5,18 @@
 }
 body {
   background-color: #e7f6ff;
+  height: 100vh;
 }
 .app {
   display: grid;
   grid-template-columns: 20% auto 20%;
-  grid-template-rows: 150px 100px auto;
+  grid-template-rows: 150px 100px 500px;
 }
 .heading {
   grid-column: 2 / span 1;
-  font-size: 50px;
+  font-size: 90px;
   align-self: center;
+  text-decoration: none;
+  color: #363636;
   justify-self: center;
 }
