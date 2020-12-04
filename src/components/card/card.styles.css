@@ -28,7 +28,7 @@
 }
 .homeCard:hover {
   cursor: pointer;
-  transform: translateY(-5px) scale(1.005) translateZ(0);
+  transform: translateY(-5px) translateZ(0);
 }
 homeImage {
   grid-row: 1;
