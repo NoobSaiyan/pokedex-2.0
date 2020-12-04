@@ -8,8 +8,9 @@ const Search: React.FC = () => {
   return (
     <div className='searchBase'>
       <Center h='100%' v='100%'>
-        <HStack>
+        <HStack spacing='20px'>
           <Input
+            maxW='150px'
             variant='flushed'
             fontWeight='200'
             fontSize='20px'
@@ -19,7 +20,7 @@ const Search: React.FC = () => {
           />
           <Box
             as='button'
-            width='100px'
+            width='80px'
             bg='#B2DEFF'
             height='35px'
             fontWeight='200'

@@ -24,7 +24,8 @@
   overflow: hidden;
   height: 100%;
   overflow-y: auto;
-  padding-left: 2%;
+  padding-left: 3%;
+  padding-right: 1%;
   display: flex;
   flex-wrap: wrap;
   justify-self: center;

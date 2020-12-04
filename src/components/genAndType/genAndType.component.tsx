@@ -7,9 +7,9 @@ const GenAndType: React.FC = () => {
   return (
     <div className='filtersBase'>
       <Center h='100%' v='100%'>
-        <HStack spacing='10%'>
+        <HStack spacing='10px'>
           <Select
-            width='120px'
+            maxW='120px'
             fontWeight='200'
             fontSize='16px'
             color='#363636'
@@ -23,7 +23,7 @@ const GenAndType: React.FC = () => {
             <option value='option3'>Option 3</option>
           </Select>
           <Select
-            width='120px'
+            maxW='120px'
             fontWeight='200'
             fontSize='16px'
             color='#363636'
