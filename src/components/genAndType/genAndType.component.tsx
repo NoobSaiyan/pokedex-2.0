@@ -1,8 +1,44 @@
 import React from 'react'
+import { Select, HStack, Center } from '@chakra-ui/react'
 
 import './genAndType.style.css'
 
 const GenAndType: React.FC = () => {
-  return <div className='filtersBase'>genrations and type</div>
+  return (
+    <div className='filtersBase'>
+      <Center h='100%' v='100%'>
+        <HStack spacing='10%'>
+          <Select
+            iconSize='0px'
+            fontWeight='200'
+            fontSize='18px'
+            color='#363636'
+            bg='#B2DEFF'
+            borderColor='#B2DEFF'
+            size='sm'
+            placeholder='Generation'
+          >
+            <option value='option1'>Option 1</option>
+            <option value='option2'>Option 2</option>
+            <option value='option3'>Option 3</option>
+          </Select>
+          <Select
+            iconSize='0px'
+            fontWeight='200'
+            fontSize='18px'
+            color='#363636'
+            bg='#B2DEFF'
+            borderColor='#B2DEFF'
+            size='sm'
+            placeholder='Types'
+          >
+            <option value='option1'>Option 1</option>
+            <option value='option2'>Option 2</option>
+            <option value='option3'>Option 3</option>
+          </Select>
+        </HStack>
+      </Center>
+    </div>
+  )
 }
 export default GenAndType
