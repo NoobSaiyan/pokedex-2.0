@@ -9,9 +9,9 @@ const GenAndType: React.FC = () => {
       <Center h='100%' v='100%'>
         <HStack spacing='10%'>
           <Select
-            iconSize='0px'
+            width='120px'
             fontWeight='200'
-            fontSize='18px'
+            fontSize='16px'
             color='#363636'
             bg='#B2DEFF'
             borderColor='#B2DEFF'
@@ -23,9 +23,9 @@ const GenAndType: React.FC = () => {
             <option value='option3'>Option 3</option>
           </Select>
           <Select
-            iconSize='0px'
+            width='120px'
             fontWeight='200'
-            fontSize='18px'
+            fontSize='16px'
             color='#363636'
             bg='#B2DEFF'
             borderColor='#B2DEFF'
