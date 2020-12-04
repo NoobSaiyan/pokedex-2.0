@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useQuery } from 'react-query'
 
 import Card from '../../components/card/card.component'
+import ToolBar from '../../components/toolbar/toolbar.component'
 
 import './homepage.style.css'
 
@@ -26,7 +27,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <div className='homeTool' />
+      <ToolBar />
       <div className='container'>
         <div className='cards'>
           {queryInfo.data?.map(({ name, url }) => {

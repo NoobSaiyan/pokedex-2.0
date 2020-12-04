@@ -1,0 +1,14 @@
+.title {
+  grid-column: 2;
+  background-color: #6dc0ff;
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 0,
+    100% 100%,
+    80% 30%,
+    20% 30%,
+    0 100%,
+    0 0
+  );
+}

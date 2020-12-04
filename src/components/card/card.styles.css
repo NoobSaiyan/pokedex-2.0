@@ -24,6 +24,11 @@
     14% 40%,
     0 32%
   );
+  transition: all 0.3s ease-out;
+}
+.homeCard:hover {
+  cursor: pointer;
+  transform: translateY(-5px) scale(1.005) translateZ(0);
 }
 homeImage {
   grid-row: 1;
