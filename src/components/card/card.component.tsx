@@ -20,6 +20,7 @@ const Card: React.FC<Props> = ({ name, id }) => {
     height: '100px',
     width: '100px',
     marginTop: '10px',
+    marginLeft: '20px',
   }
 
   return (
