@@ -6,7 +6,7 @@ const Title: React.FC = () => {
   return (
     <div className='title'>
       <div className='titleClip' />
-      <p className='titlespan'>title</p>
+      <p className='titlespan'>Title</p>
     </div>
   )
 }
