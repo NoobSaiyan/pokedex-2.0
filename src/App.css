@@ -14,9 +14,10 @@ body {
 }
 .heading {
   grid-column: 2 / span 1;
-  font-size: 90px;
+  font-size: 80px;
   align-self: center;
   text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
   color: #363636;
   justify-self: center;
 }
