@@ -10,7 +10,7 @@ body {
 .app {
   display: grid;
   grid-template-columns: 20% auto 20%;
-  grid-template-rows: 130px 80px 540px;
+  grid-template-rows: 130px 620px;
 }
 .heading {
   grid-column: 2 / span 1;

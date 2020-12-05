@@ -1,5 +1,6 @@
-.homeTool {
-  grid-column: 2;
+.home {
+  display: grid;
   grid-row: 2;
-  background-color: #6dc0ff;
+  grid-column: 2;
+  grid-template-rows: 100px 520px;
 }

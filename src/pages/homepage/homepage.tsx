@@ -23,10 +23,10 @@ const HomePage: React.FC = () => {
   )
 
   return (
-    <>
+    <div className='home'>
       <HomeToolBar />
       {pokemonData ? <Cards pokemonData={pokemonData} /> : null}
-    </>
+    </div>
   )
 }
 export default HomePage
