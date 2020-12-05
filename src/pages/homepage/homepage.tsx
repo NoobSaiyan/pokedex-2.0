@@ -15,12 +15,18 @@ interface PokemonResponseResultItem {
   url: string
 }
 
-const HomePage: React.FC = () => {
-  const { data: pokemonData } = useQuery('pokemon', () =>
-    axios
-      .get<PokemonResponse>('https://pokeapi.co/api/v2/generation/1')
-      .then((res) => res.data.pokemon_species)
+const pokemonFetcher = async (key: string, gen: string) => {
+  const { data } = await axios.get<PokemonResponse>(
+    `https://pokeapi.co/api/v2/${key}/${gen}`
   )
+
+  return data.pokemon_species
+}
+
+const HomePage: React.FC = () => {
+  const [gen, setGen] = React.useState(1)
+
+  const { data: pokemonData } = useQuery(['generation', gen], pokemonFetcher)
 
   return (
     <div className='home'>

@@ -17,11 +17,14 @@ const GenAndType: React.FC = () => {
             bg='#B2DEFF'
             borderColor='#B2DEFF'
             size='sm'
-            placeholder='Gen'
+            placeholder='Gen 1'
           >
-            <option value='option1'>Option 1</option>
-            <option value='option2'>Option 2</option>
-            <option value='option3'>Option 3</option>
+            <option value='option1'>Gen 2</option>
+            <option value='option2'>Gen 3</option>
+            <option value='option3'>Gen 5</option>
+            <option value='option3'>Gen 6</option>
+            <option value='option3'>Gen 7</option>
+            <option value='option3'>Gen 8</option>
           </Select>
           <Select
             maxW='150px'
