@@ -19,19 +19,23 @@ const pokemonFetcher = async (key: string, gen: string) => {
   const { data } = await axios.get<PokemonResponse>(
     `https://pokeapi.co/api/v2/${key}/${gen}`
   )
-
   return data.pokemon_species
 }
 
 const HomePage: React.FC = () => {
-  const [gen, setGen] = React.useState(1)
+  const [gen, setGen] = React.useState('1')
 
-  const { data: pokemonData } = useQuery(['generation', gen], pokemonFetcher)
+  const { data: pokemonData, isLoading: loading } = useQuery(
+    ['generation', gen],
+    pokemonFetcher
+  )
 
   return (
     <div className='home'>
-      <HomeToolBar />
-      {pokemonData ? <Cards pokemonData={pokemonData} /> : null}
+      <HomeToolBar gen={gen} setGen={setGen} />
+      {pokemonData ? (
+        <Cards pokemonData={pokemonData} loading={loading} />
+      ) : null}
     </div>
   )
 }

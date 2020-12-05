@@ -6,11 +6,16 @@ import Search from '../search/search.component'
 
 import './homeToolbar.style.css'
 
-const HomeToolBar = () => {
+interface Props {
+  gen: string
+  setGen: (value: string) => void
+}
+
+const HomeToolBar: React.FC<Props> = ({ gen, setGen }) => {
   return (
     <div className='toolbar'>
-      <GenAndType />
-      <Title />
+      <GenAndType gen={gen} setGen={setGen} />
+      <Title gen={gen} />
       <Search />
     </div>
   )
