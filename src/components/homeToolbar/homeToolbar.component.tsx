@@ -4,9 +4,9 @@ import Title from '../title/title.component'
 import GenAndType from '../genAndType/genAndType.component'
 import Search from '../search/search.component'
 
-import './toolbar.style.css'
+import './homeToolbar.style.css'
 
-const ToolBar = () => {
+const HomeToolBar = () => {
   return (
     <div className='toolbar'>
       <GenAndType />
@@ -15,4 +15,4 @@ const ToolBar = () => {
     </div>
   )
 }
-export default ToolBar
+export default HomeToolBar

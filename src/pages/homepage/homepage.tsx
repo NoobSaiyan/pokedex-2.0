@@ -2,16 +2,13 @@ import React from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
 
-import Card from '../../components/card/card.component'
-import ToolBar from '../../components/toolbar/toolbar.component'
+import HomeToolBar from '../../components/homeToolbar/homeToolbar.component'
+import Cards from '../../components/cards/cards.component'
 
 import './homepage.style.css'
 
 interface PokemonResponse {
-  count: number
-  next: string | null
-  previous: string | null
-  results: PokemonResponseResultItem[]
+  pokemon_species: PokemonResponseResultItem[]
 }
 interface PokemonResponseResultItem {
   name: string
@@ -19,24 +16,16 @@ interface PokemonResponseResultItem {
 }
 
 const HomePage: React.FC = () => {
-  const queryInfo = useQuery('pokemon', () =>
+  const { data: pokemonData } = useQuery('pokemon', () =>
     axios
-      .get<PokemonResponse>('https://pokeapi.co/api/v2/pokemon')
-      .then((res) => res.data.results)
+      .get<PokemonResponse>('https://pokeapi.co/api/v2/generation/1')
+      .then((res) => res.data.pokemon_species)
   )
 
   return (
     <>
-      <ToolBar />
-      <div className='container'>
-        <div className='cards'>
-          {queryInfo.data?.map(({ name, url }) => {
-            let arr = url.split('/')
-            let id = parseInt(arr[arr.length - 2])
-            return <Card key={id} name={name} id={id} />
-          })}
-        </div>
-      </div>
+      <HomeToolBar />
+      {pokemonData ? <Cards pokemonData={pokemonData} /> : null}
     </>
   )
 }
