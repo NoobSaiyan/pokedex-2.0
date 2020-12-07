@@ -15,44 +15,27 @@ const GenAndType: React.FC<Props> = ({ gen, setGen }) => {
   return (
     <div className='filtersBase'>
       <Center h='100%' v='100%'>
-        <HStack spacing='10px'>
-          <Select
-            maxW='150px'
-            iconSize='md'
-            fontWeight='200'
-            fontSize='16px'
-            color='#363636'
-            bg='#B2DEFF'
-            borderColor='#B2DEFF'
-            size='sm'
-            value={gen}
-            onChange={handleChange}
-          >
-            <option value='1'>Gen 1</option>
-            <option value='2'>Gen 2</option>
-            <option value='3'>Gen 3</option>
-            <option value='4'>Gen 4</option>
-            <option value='5'>Gen 5</option>
-            <option value='6'>Gen 6</option>
-            <option value='7'>Gen 7</option>
-            <option value='8'>Gen 8</option>
-          </Select>
-          <Select
-            maxW='150px'
-            fontWeight='200'
-            iconSize='md'
-            fontSize='16px'
-            color='#363636'
-            bg='#B2DEFF'
-            borderColor='#B2DEFF'
-            size='sm'
-            placeholder='Types'
-          >
-            <option value='option1'>Option 1</option>
-            <option value='option2'>Option 2</option>
-            <option value='option3'>Option 3</option>
-          </Select>
-        </HStack>
+        <Select
+          maxW='150px'
+          iconSize='md'
+          fontWeight='200'
+          fontSize='16px'
+          color='#363636'
+          bg='#B2DEFF'
+          borderColor='#B2DEFF'
+          size='sm'
+          value={gen}
+          onChange={handleChange}
+        >
+          <option value='1'>Generation 1</option>
+          <option value='2'>Generation 2</option>
+          <option value='3'>Generation 3</option>
+          <option value='4'>Generation 4</option>
+          <option value='5'>Generation 5</option>
+          <option value='6'>Generation 6</option>
+          <option value='7'>Generation 7</option>
+          <option value='8'>Generation 8</option>
+        </Select>
       </Center>
     </div>
   )
