@@ -1,5 +1,5 @@
 import React from 'react'
-import { Select, HStack, Center } from '@chakra-ui/react'
+import { Select, Center } from '@chakra-ui/react'
 
 import './genAndType.style.css'
 
