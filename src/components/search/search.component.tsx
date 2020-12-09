@@ -4,7 +4,10 @@ import { Input, HStack, Center, Box } from '@chakra-ui/react'
 
 import './search.style.css'
 
-const Search: React.FC = () => {
+interface Props {
+  handleChange: (e: any) => void
+}
+const Search: React.FC<Props> = ({ handleChange }) => {
   return (
     <div className='searchBase'>
       <Center h='100%' v='100%'>
@@ -17,6 +20,7 @@ const Search: React.FC = () => {
             color='#363636'
             borderColor='#363636'
             placeholder='Name'
+            onChange={handleChange}
           />
           <Box
             as='button'
