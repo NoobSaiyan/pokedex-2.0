@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Card from '../../components/card/card.component'
 
@@ -24,7 +25,11 @@ const Cards: React.FC<Props> = ({ pokemonData, loading }) => {
           {pokemonData.map(({ name, url }) => {
             let arr = url.split('/')
             let id = parseInt(arr[arr.length - 2])
-            return <Card key={id} name={name} id={id} />
+            return (
+              <Link key={url} to={`/${id}`}>
+                <Card key={id} name={name} id={id} />
+              </Link>
+            )
           })}
         </div>
       )}
