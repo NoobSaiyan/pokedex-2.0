@@ -3,14 +3,14 @@ import React from 'react'
 import './title.style.css'
 
 interface Props {
-  gen: string
+  title: string
 }
 
-const Title: React.FC<Props> = ({ gen }) => {
+const Title: React.FC<Props> = ({ title }) => {
   return (
     <div className='title'>
       <div className='titleClip' />
-      <p className='titlespan'>Gen - {gen}</p>
+      <p className='titlespan'>{title}</p>
     </div>
   )
 }

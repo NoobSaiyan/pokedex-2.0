@@ -24,9 +24,16 @@ const InfoPage: React.FC<Params> = () => {
   let { id } = useParams<any>()
   const { data: informationData } = useQuery(id, informationFetcher)
 
+  function pad(n: string, width: number, z: string) {
+    z = z || '0'
+    n = n + ''
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
+  }
+  const idTitle = pad(id.toString(), 3, '')
+
   return (
     <div className='information'>
-      <InformationToolbar />
+      <InformationToolbar title={idTitle} />
       <h1>{informationData?.name}</h1>
     </div>
   )

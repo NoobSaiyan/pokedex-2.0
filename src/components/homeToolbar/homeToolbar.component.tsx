@@ -12,10 +12,11 @@ interface Props {
   setGen: (value: string) => void
 }
 const HomeToolBar: React.FC<Props> = ({ gen, setGen, handleChange }) => {
+  let genTitle = 'Gen - ' + gen
   return (
     <div className='toolbar'>
       <GenAndType gen={gen} setGen={setGen} />
-      <Title gen={gen} />
+      <Title title={genTitle} />
       <Search handleChange={handleChange} />
     </div>
   )
