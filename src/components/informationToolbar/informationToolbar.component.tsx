@@ -2,7 +2,7 @@ import React from 'react'
 
 import Title from '../title/title.component'
 
-import './homeToolbar.style.css'
+import './informationToolbar.style.css'
 
 const InformationToolbar: React.FC = () => {
   return (
