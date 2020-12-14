@@ -29,7 +29,8 @@ const InfoPage: React.FC<Params> = () => {
     n = n + ''
     return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
   }
-  const idTitle = pad(id.toString(), 3, '')
+  let idTitle = pad(id.toString(), 3, '')
+  idTitle = '#' + idTitle
 
   return (
     <div className='information'>
