@@ -44,7 +44,9 @@ const Card: React.FC<Props> = ({ name, id, genName }) => {
     marginTop: '10px',
     marginLeft: '20px',
   }
-  const { data: typesData } = useQuery(id, typesFetcher)
+  const { data: typesData } = useQuery(id, typesFetcher, {
+    staleTime: Infinity,
+  })
 
   return (
     <div className='homeCard'>

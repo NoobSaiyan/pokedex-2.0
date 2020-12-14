@@ -37,7 +37,10 @@ const HomePage: React.FC = () => {
 
   const { data: pokemonData, isLoading: loading } = useQuery(
     ['generation', gen],
-    pokemonFetcher
+    pokemonFetcher,
+    {
+      staleTime: Infinity,
+    }
   )
 
   const filteredPokemon = pokemonData?.pokemon_species?.filter(({ name }) =>

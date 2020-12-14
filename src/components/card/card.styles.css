@@ -61,15 +61,18 @@ homeImage {
   text-orientation: upright;
 }
 .homeTypes {
-  display: grid;
+  display: flex;
   grid-column: 2;
   grid-row: 3;
-  justify-content: center;
-  margin-top: 12px;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 7px;
   margin-bottom: 5px;
 }
 .type {
   line-height: 20px;
+  margin-top: 5px;
   height: 22px;
   width: 100px;
   font-weight: 300;
