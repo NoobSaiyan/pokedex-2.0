@@ -61,7 +61,18 @@ homeImage {
   text-orientation: upright;
 }
 .homeTypes {
+  display: grid;
   grid-column: 2;
   grid-row: 3;
-  font-size: 12px;
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+.type {
+  line-height: 20px;
+  height: 22px;
+  width: 100px;
+  font-weight: 300;
+  font-size: 13px;
+  background-color: #fff2bc;
 }

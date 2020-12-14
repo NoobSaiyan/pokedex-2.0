@@ -59,7 +59,7 @@ const Card: React.FC<Props> = ({ name, id, genName }) => {
       <div className='homeName'>{name}</div>
       <div className='homeTypes'>
         {typesData?.map(({ type }) => {
-          return <h3>{type.name}</h3>
+          return <div className='type'>{type.name}</div>
         })}
       </div>
       <div className='genName'>{genName}</div>
