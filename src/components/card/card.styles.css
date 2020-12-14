@@ -4,7 +4,8 @@
   font-weight: 400;
   text-align: center;
   background-color: #ffeb99;
-  margin-top: 25px;
+  margin-top: 27px;
+  margin-right: 2px;
   height: 200px;
   width: 200px;
   display: grid;
@@ -46,6 +47,16 @@ homeImage {
   margin-right: 20%;
   height: 60%;
   font-size: 12px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+.genName {
+  grid-row: -3/ -1;
+  grid-column: -2/ -1;
+  font-family: 'Offside', cursive;
+  font-weight: bold;
+  font-size: 10px;
+  margin-right: 30%;
   writing-mode: vertical-rl;
   text-orientation: upright;
 }

@@ -3,11 +3,12 @@ import * as _ from 'lodash'
 import './card.styles.css'
 
 interface Props {
+  genName?: string
   name: string
   id: number
 }
 
-const Card: React.FC<Props> = ({ name, id }) => {
+const Card: React.FC<Props> = ({ name, id, genName }) => {
   name = _.startCase(_.toLower(name))
   function pad(n: string, width: number, z: string) {
     z = z || '0'
@@ -34,6 +35,7 @@ const Card: React.FC<Props> = ({ name, id }) => {
         />
       </div>
       <div className='homeName'>{name}</div>
+      <div className='genName'>{genName}</div>
     </div>
   )
 }

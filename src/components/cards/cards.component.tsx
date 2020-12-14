@@ -6,6 +6,7 @@ import Card from '../../components/card/card.component'
 import './cards.style.css'
 
 interface Props {
+  genName?: string
   pokemonData: PokemonResponseResultItem[]
   loading: boolean
 }
@@ -15,7 +16,7 @@ interface PokemonResponseResultItem {
   url: string
 }
 
-const Cards: React.FC<Props> = ({ pokemonData, loading }) => {
+const Cards: React.FC<Props> = ({ pokemonData, loading, genName }) => {
   return (
     <div className='container'>
       {loading ? (
@@ -27,7 +28,7 @@ const Cards: React.FC<Props> = ({ pokemonData, loading }) => {
             let id = parseInt(arr[arr.length - 2])
             return (
               <Link key={url} to={`/${id}`}>
-                <Card key={id} name={name} id={id} />
+                <Card key={id} name={name} id={id} genName={genName} />
               </Link>
             )
           })}
