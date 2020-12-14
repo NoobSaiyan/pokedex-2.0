@@ -60,3 +60,8 @@ homeImage {
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+.homeTypes {
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 12px;
+}
