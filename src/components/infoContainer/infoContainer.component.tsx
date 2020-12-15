@@ -1,16 +1,17 @@
 import React from 'react'
-import axios from 'axios'
-import { useQuery } from 'react-query'
 
 import InfoCard from '../infoCard/infoCard.component'
 
 import './infoContainer.style.css'
 
-interface PokemonResponse {
-  name: string
-}
-interface Params {
+interface Props {
+  informationData?: informationData
   id: number
+}
+interface informationData {
+  name: string
+  height: string
+  weight: string
 }
 const imgStyles: React.CSSProperties = {
   height: '300px',
@@ -20,15 +21,7 @@ const imgStyles: React.CSSProperties = {
   float: 'right',
 }
 
-const informationFetcher = async (id: number) => {
-  const { data } = await axios.get<PokemonResponse>(
-    `https://pokeapi.co/api/v2/pokemon/${id}`
-  )
-  return data
-}
-
-const InfoContainer: React.FC<Params> = ({ id }) => {
-  const { data: informationData } = useQuery(id, informationFetcher)
+const InfoContainer: React.FC<Props> = ({ id, informationData }) => {
   return (
     <div className='infoContainer'>
       <div className='infoImage'>

@@ -1,6 +1,7 @@
 .infoCard {
   display: grid;
-  grid-template-rows: 85px auto;
+  grid-template-rows: 85px 32px auto;
+  grid-template-columns: 70px auto;
   height: 400px;
   width: 90%;
   background-color: #ffeb99;
@@ -24,6 +25,14 @@
   display: flex;
   align-self: center;
   margin-left: 33px;
-  font-weight: 100;
-  font-size: 30px;
+  font-weight: 300;
+  font-size: 40px;
+}
+.details {
+  font-size: 22px;
+  font-weight: 300;
+  grid-row: 3;
+  grid-column: 2;
+  margin-top: 10px;
+  margin-left: 20px;
 }
