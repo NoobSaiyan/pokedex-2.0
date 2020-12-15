@@ -1,0 +1,29 @@
+.infoCard {
+  display: grid;
+  grid-template-rows: 85px auto;
+  height: 400px;
+  width: 90%;
+  background-color: #ffeb99;
+  margin-top: 50px;
+  clip-path: polygon(
+    0 8%,
+    0 0,
+    15% 0%,
+    85% 0%,
+    85% 47%,
+    100% 60%,
+    100% 85%,
+    100% 100%,
+    85% 100%,
+    13% 100%,
+    13% 30%,
+    0 21%
+  );
+}
+.infoName {
+  display: flex;
+  align-self: center;
+  margin-left: 33px;
+  font-weight: 100;
+  font-size: 30px;
+}

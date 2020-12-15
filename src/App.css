@@ -14,8 +14,7 @@ body {
 }
 .heading {
   grid-column: 2 / span 1;
-  font-size: 80px;
-  align-self: center;
+  font-size: 60px;
   text-decoration: none;
   font-family: 'Major Mono Display', monospace;
   color: #363636;
