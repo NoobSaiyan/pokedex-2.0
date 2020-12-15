@@ -12,11 +12,22 @@ body {
   grid-template-columns: 15% auto 15%;
   grid-template-rows: 120px 630px;
 }
-.heading {
-  grid-column: 2 / span 1;
+.headingText {
   font-size: 60px;
+  align-self: center;
   text-decoration: none;
   font-family: 'Major Mono Display', monospace;
   color: #363636;
+}
+.heading {
+  display: flex;
+  grid-column: 2 / span 1;
+  flex-direction: row;
   justify-self: center;
+}
+.eevee {
+  display: flex;
+  align-self: center;
+  width: 50px;
+  height: 50px;
 }

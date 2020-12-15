@@ -11,7 +11,8 @@ const App: React.FC = () => {
   return (
     <div className='app'>
       <Link to='/' className='heading'>
-        Dex
+        <img className='eevee' src='/eevee.gif' alt='not found' />
+        <h1 className='headingText'>DEX</h1>
       </Link>
       <Switch>
         <Route exact path='/' component={HomePage} />
