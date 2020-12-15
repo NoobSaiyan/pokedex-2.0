@@ -12,7 +12,7 @@ const App: React.FC = () => {
     <div className='app'>
       <Link to='/' className='heading'>
         <img className='eevee' src='/eevee.gif' alt='not found' />
-        <h1 className='headingText'>DEX</h1>
+        <h1 className='headingText'>DeX</h1>
       </Link>
       <Switch>
         <Route exact path='/' component={HomePage} />
