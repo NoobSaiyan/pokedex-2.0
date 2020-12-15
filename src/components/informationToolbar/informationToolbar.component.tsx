@@ -10,9 +10,9 @@ interface Props {
 const InformationToolbar: React.FC<Props> = ({ title }) => {
   return (
     <div className='toolbar'>
-      <h1>previous</h1>
+      <h1 style={{ backgroundColor: '#6dc0ff' }}>previous</h1>
       <Title title={title} />
-      <h1>next</h1>
+      <h1 style={{ backgroundColor: '#6dc0ff' }}>next</h1>
     </div>
   )
 }

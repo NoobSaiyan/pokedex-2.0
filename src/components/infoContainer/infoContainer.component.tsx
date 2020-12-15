@@ -16,7 +16,8 @@ const imgStyles: React.CSSProperties = {
   height: '300px',
   width: '300px',
   marginTop: '150px',
-  marginLeft: '50px',
+  marginRight: '10%',
+  float: 'right',
 }
 
 const informationFetcher = async (id: number) => {
