@@ -1,5 +1,6 @@
 import React from 'react'
 import * as _ from 'lodash'
+import { PokemonId } from '../../asset/pokemonId'
 import './card.styles.css'
 import axios from 'axios'
 import { useQuery } from 'react-query'
@@ -30,12 +31,8 @@ const typesFetcher = async (pokiId: string) => {
 const Card: React.FC<Props> = ({ name, id, genName }) => {
   // formatting name and serial number
   name = _.startCase(_.toLower(name))
-  function pad(n: string, width: number, z: string) {
-    z = z || '0'
-    n = n + ''
-    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n
-  }
-  const num = pad(id.toString(), 3, '')
+
+  const num = PokemonId(id)
 
   // image tag css properties
   const imgStyles: React.CSSProperties = {
