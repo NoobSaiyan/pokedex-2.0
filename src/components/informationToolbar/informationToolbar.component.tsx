@@ -2,6 +2,7 @@ import React from 'react'
 
 import Title from '../title/title.component'
 import { PokemonId } from '../../asset/pokemonId'
+import { Link } from 'react-router-dom'
 
 import './informationToolbar.style.css'
 
@@ -11,11 +12,19 @@ interface Props {
 
 const InformationToolbar: React.FC<Props> = ({ id }) => {
   let idTitle = PokemonId(id)
+  let prev = id - 1
+  let next = id + 1
+  console.log(typeof id)
   return (
     <div className='toolbar'>
-      <h1 style={{ backgroundColor: '#6dc0ff' }}>{idTitle}</h1>
+      <Link to={`/${prev}`}>
+        <div className='prev'>{`⇚ ${PokemonId(prev)}`}</div>
+      </Link>
+
       <Title title={idTitle} />
-      <h1 style={{ backgroundColor: '#6dc0ff' }}>next</h1>
+      <Link to={`/${next}`}>
+        <div className='next'>{`${PokemonId(next)} ⇛`}</div>
+      </Link>
     </div>
   )
 }

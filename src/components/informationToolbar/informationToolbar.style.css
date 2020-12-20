@@ -1,0 +1,21 @@
+.prev {
+  display: flex;
+  font-size: 25px;
+  font-weight: 300;
+  align-items: center;
+  padding-left: 30px;
+  background-color: #6dc0ff;
+  height: 100%;
+  width: 100%;
+}
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 300;
+  font-size: 25px;
+  padding-right: 30px;
+  background-color: #6dc0ff;
+  height: 100%;
+  width: 100%;
+}

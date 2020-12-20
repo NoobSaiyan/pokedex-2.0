@@ -26,6 +26,7 @@ const informationFetcher = async (id: number) => {
 
 const InfoPage: React.FC<Params> = () => {
   let { id } = useParams<any>()
+  id = parseInt(id)
 
   const { data: informationData } = useQuery(id, informationFetcher)
 
