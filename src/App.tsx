@@ -11,7 +11,7 @@ const App: React.FC = () => {
   return (
     <div className='app'>
       <Link to='/' className='heading'>
-        <img className='eevee' src='/eevee.gif' alt='not found' />
+        <img className='eevee' src='/pokedex-2.0/eevee.gif' alt='not found' />
         <h1 className='headingText'>DeX</h1>
       </Link>
       <Switch>
