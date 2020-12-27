@@ -21,7 +21,7 @@ interface Types {
   }
 }
 
-const typesFetcher = async (pokiId: string) => {
+const typesFetcher = async (key: string, pokiId: string) => {
   const { data } = await axios.get<TypesResponse>(
     `https://pokeapi.co/api/v2/pokemon/${pokiId}`
   )
@@ -41,9 +41,10 @@ const Card: React.FC<Props> = ({ name, id, genName }) => {
     marginTop: '10px',
     marginLeft: '20px',
   }
-  const { data: typesData } = useQuery(id, typesFetcher, {
+  const { data: typesData } = useQuery(['types', id], typesFetcher, {
     staleTime: Infinity,
   })
+  console.log('rip', typesData)
 
   return (
     <div className='homeCard'>

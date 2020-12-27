@@ -29,12 +29,6 @@ const pokemonFetcher = async (key: string, gen: string) => {
 
 const HomePage: React.FC = () => {
   const [gen, setGen] = React.useState('1')
-  const [searchTerm, setSearchTerm] = React.useState('')
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value)
-  }
-
   const { data: pokemonData, isLoading: loading } = useQuery(
     ['generation', gen],
     pokemonFetcher,
@@ -42,6 +36,11 @@ const HomePage: React.FC = () => {
       staleTime: Infinity,
     }
   )
+  const [searchTerm, setSearchTerm] = React.useState('')
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value)
+  }
 
   const filteredPokemon = pokemonData?.pokemon_species?.filter(({ name }) =>
     name.toLocaleLowerCase().includes(searchTerm)

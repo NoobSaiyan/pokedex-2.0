@@ -12,9 +12,14 @@ interface Props {
 
 const InformationToolbar: React.FC<Props> = ({ id }) => {
   let idTitle = PokemonId(id)
-  let prev = id - 1
-  let next = id + 1
-  console.log(typeof id)
+  let prev = id - 1,
+    next = id + 1
+  if (id <= 1) {
+    prev = 858
+  } else if (id >= 858) {
+    next = 1
+  }
+
   return (
     <div className='toolbar'>
       <Link to={`/${prev}`}>
